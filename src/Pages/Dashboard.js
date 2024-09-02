@@ -85,7 +85,7 @@ const Dashboard = () => {
             <a href="#artists" className="link">{t('artists')}</a>
             <a href="#albums" className="link">{t('albums')}</a>
             <a href="#playlists" className="link">{t('playlists')}</a>
-            <a href="#readme" className="link">{t('Developer')}</a>
+            <a href="https://github.com/winchesterrock/Music_Dashboard" className="link"target="_blank" rel="noopener noreferrer">{t('Developer')}</a>
           </div>
           <div className="sidebarFooter">
             <FaSignOutAlt className="icon" /> {t('logout')}
