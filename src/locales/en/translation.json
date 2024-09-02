@@ -1,0 +1,20 @@
+{
+  "logout": "Logout",
+  "Total Users": "Total Users",
+  "Active Users": "Active Users",
+  "Total Streams": "Total Streams",
+  "Revenue": "Revenue",
+  "Top Artists": "Top Artists",
+  "songs": "Songs",
+  "artists": "Artists",
+  "albums": "Albums",
+  "playlists": "Playlists",
+  "readme": "Readme",
+  "Dashboard": "Dashboard",
+  "Home": "Home",
+  "Developer": "Developer",
+  "User Growth":"User Growth",
+    "Revenue Distribution":"Revenue Distribution",
+    "Top 5 Streamed Songs":"Top 5 Streamed Songs",
+    "Recent Streams":"Recent Streams"
+}

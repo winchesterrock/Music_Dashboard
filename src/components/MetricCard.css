@@ -1,0 +1,124 @@
+/* MetricCard.css */
+@keyframes glitter {
+    0% {
+      background-position: -500% 0;
+    }
+    100% {
+      background-position: 500% 0;
+    }
+  }
+  
+  .card {
+    background-color: #000;
+    background-image: linear-gradient(270deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.2) 100%);
+    background-size: 200% 200%;
+    /* animation: glitter 2s linear infinite; */
+    border-radius: 12px; /* Increased border radius for a more prominent card */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* Increased shadow for more emphasis */
+    padding: 30px; /* Increased padding */
+    margin: 15px; /* Increased margin */
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    
+    
+  }
+  
+  .image {
+    width: 60px; /* Increased image size */
+    height: 60px; /* Increased image size */
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 10px;
+  }
+  
+  .title {
+    font-size: 1.5em; /* Increased font size */
+    margin-bottom: 15px; /* Increased margin */
+    color: #fff;
+  }
+  
+  .value {
+    font-size: 2.5em; /* Increased font size */
+    font-weight: bold;
+    color: #007BFF;
+  }
+  
+  .newValue {
+    font-size: 1em; /* Increased font size */
+    color: #4CAF50;
+  }
+  
+  .DecreasedValue {
+    font-size: 1em; /* Increased font size */
+    color: #da1414;
+  }
+  
+  .arrowIcon {
+    color: #4CAF50;
+  }
+  
+  .arrowIconDown {
+    color: #da1414;
+  }
+  .chart {
+    height: 100px; /* Adjust height as needed */
+    margin-top: 20px;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .card {
+      padding: 20px; /* Adjust padding for tablets */
+      margin: 10px; /* Adjust margin for tablets */
+    }
+  
+    .image {
+      width: 50px; /* Adjust image size for tablets */
+      height: 50px; /* Adjust image size for tablets */
+    }
+  
+    .title {
+      font-size: 1.2em; /* Adjust font size for tablets */
+    }
+  
+    .value {
+      font-size: 2em; /* Adjust font size for tablets */
+    }
+  
+    .newValue, .DecreasedValue {
+      font-size: 0.8em; /* Adjust font size for tablets */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .card {
+      padding: 10px; /* Adjust padding for mobile */
+      margin: 5px; /* Adjust margin for mobile */
+    }
+    .card.total-streams {
+      height: 210px; /* Adjust height */
+      width: 100%; /* Adjust width */
+    }
+     
+    .image {
+      width: 40px; /* Adjust image size for mobile */
+      height: 40px; /* Adjust image size for mobile */
+    }
+  
+    .title {
+      font-size: 1em; /* Adjust font size for mobile */
+    }
+  
+    .value {
+      font-size: 1.5em; /* Adjust font size for mobile */
+    }
+  
+    .newValue, .DecreasedValue {
+      font-size: 0.7em; /* Adjust font size for mobile */
+    }
+    .chart {
+        height: 130px; /* Adjust height for mobile */
+       }
+  }
+  

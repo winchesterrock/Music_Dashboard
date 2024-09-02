@@ -1,0 +1,20 @@
+{
+    "logout": "Cerrar sesión",
+    "Total Users": "Usuarios Totales",
+    "Active Users": "Usuarios Activos",
+    "Total Streams": "Transmisiones Totales",
+    "Revenue": "Ingresos",
+    "Top Artists": "Artistas Principales",
+    "songs": "Canciones",
+    "artists": "Artistas",
+    "albums": "Álbumes",
+    "playlists": "Listas de reproducción",
+    "readme": "Léame",
+    "Dashboard":"Panel",
+    "Home": "Hogar",
+    "Developer":"Desarrollador",
+    "User Growth":"Crecimiento de usuarios",
+    "Revenue Distribution":"Distribución de ingresos",
+    "Top 5 Streamed Songs":"Las 5 mejores canciones transmitidas",
+    "Recent Streams":"Transmisiones recientes"
+  }

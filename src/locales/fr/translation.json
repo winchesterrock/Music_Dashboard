@@ -1,0 +1,20 @@
+{
+    "logout": "Déconnexion",
+    "Total Users": "Utilisateurs Totals",
+    "Active Users": "Utilisateurs Actifs",
+    "Total Streams": "Total des Flux",
+    "Revenue": "Revenu",
+    "Top Artists": "Meilleurs Artistes",
+    "songs": "Chansons",
+    "artists": "Artistes",
+    "albums": "Albums",
+    "playlists": "Listes de lecture",
+    "readme": "Lisez-moi",
+    "Dashboard":"Tableau de bord",
+    "Home":"Maison",
+    "Developer":"développeur",
+    "User Growth":"Croissance des utilisateurs",
+    "Revenue Distribution":"Répartition des revenus",
+    "Top 5 Streamed Songs":"Top 5 des chansons diffusées en streaming",
+    "Recent Streams":"Flux récents"
+  }

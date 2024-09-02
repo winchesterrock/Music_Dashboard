@@ -1,0 +1,294 @@
+.dashboard {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  font-size: 24px;
+  z-index: 20;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
+  backdrop-filter: blur(10px); /* Blur effect */
+  color: #000;
+  z-index: 5;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth */
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: linear-gradient(to right, #ff0000, #ffff00);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.headerIcons {
+  display: flex;
+  align-items: center;
+  margin-left: auto; /* Pushes the icons to the right */
+}
+
+.icon {
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+.user {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #cdc2c2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 15px;
+}
+
+.main {
+  display: flex;
+  flex: 1;
+  padding-top: 50px; /* Header height */
+}
+
+.sidebar {
+  position: fixed;
+  top: 70px;
+  left: 0;
+  width: 300px;
+  height: calc(100vh - 70px); /* Full height minus header height */
+  color: white;
+  padding: 5px 5px;
+  border-radius: 16px;
+  background: rgba(231, 215, 241, 0.7); /* Semi-transparent background */
+  backdrop-filter: blur(10px); /* Blur effect */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2); /* Added shadow effect */
+  overflow-y: scroll; /* Allow scrolling */
+  z-index: 10; /* Ensure it is above the footer */
+}
+
+.sidebarHeader {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.sidebarFooter {
+  margin-top: auto;
+  padding-top: 20px;
+  border-top: 1px solid #555;
+  display: flex;
+  font-family: var(--typography-html-font, "SF Pro Display", system-ui, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Helvetica", "Arial", sans-serif);
+  font-size: 1.5em;
+  color: #000;
+  align-items: center;
+  cursor: pointer;
+}
+
+.Localization {
+  margin-top: auto;
+  padding-top: 20px;
+  display: flex;
+  font-family: var(--typography-html-font, "SF Pro Display", system-ui, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Helvetica", "Arial", sans-serif);
+  font-size: 1.5em;
+  color: #000;
+  align-items: center;
+  cursor: pointer;
+}
+
+.content {
+  flex: 1;
+  margin-left: 300px;
+  padding: 20px;
+  overflow-y: auto;
+  z-index: 1;
+}
+
+.link {
+  display: block;
+  padding: 15px;
+  color: #000;
+  font-family: var(--typography-html-font, "SF Pro Display", system-ui, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Helvetica", "Arial", sans-serif);
+  text-decoration: none;
+  margin-bottom: 35px;
+  border-radius: 15px;
+  font-size: 2.0em;
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+}
+
+.link:hover {
+  background-color: rgba(0, 0, 0, 0.1); /* Light background color on hover */
+  color: #007BFF; /* Change text color on hover */
+}
+
+.blur-background {
+  filter: blur(100px);
+  pointer-events: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  opacity: 0.7;
+}
+
+.blur-background-inner {
+  border-radius: 99999px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  min-width: 1000px;
+  height: 100vh;
+  transform: translate(-50%, -50%) scale(0.6);
+  overflow: hidden;
+}
+
+.ColorBlobs_SpinningGradient__DpGtx {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  height: 100vw;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(45deg, #dddcdd, #000000); /* Purple to black gradient */
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 250px;
+  }
+
+  .content {
+    margin-left: 250px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 15; /* Higher z-index to ensure header is above sidebar */
+  }
+
+  .sidebar {
+    width: 200px;
+    position: fixed;
+    top: 50px; /* Adjust based on header height */
+    left: -200px; /* Hide sidebar initially */
+    transition: left 0.3s;
+    height: calc(100vh - 50px); /* Full height minus header height */
+    z-index: 10; /* Ensure sidebar is above the content */
+  }
+
+  .sidebar.collapsed {
+    left: 0; /* Show sidebar */
+  }
+
+  .content {
+    margin-left: 0; /* Reset margin */
+    padding: 10px;
+    z-index: 5; /* Lower z-index to ensure content is below sidebar */
+  }
+
+  .hamburger {
+    display: block;
+    z-index: 20; /* Highest z-index to ensure hamburger is clickable */
+  }
+  .sidebar .spacer {
+    height: 180px; /* Add a spacer element to create extra scroll space */
+  }
+
+  
+}
+
+@media (max-width: 480px) {
+  .header {
+    position: fixed;
+    z-index: 15; /* Higher z-index to ensure header is above sidebar */
+    display: flex;
+    justify-content: center; /* Center align items */
+    align-items: center; /* Center align items vertically */
+    width: 100%; /* Ensure header takes full width */
+    top: 0; /* Fix to the top */
+  }
+
+  .logo {
+    font-size: 1.0em; /* Smaller font size for mobile */
+    text-align: center; /* Center align text */
+    width: 100%; /* Full width */
+  }
+
+  .hamburger {
+    font-size: 20px; /* Smaller font size for mobile */
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 10px;
+    transform: translateY(-50%); /* Center vertically */
+    z-index: 20; /* Highest z-index to ensure hamburger is clickable */
+  }
+
+  .icon {
+    display: none; /* Hide icons on mobile */
+  }
+
+  .main, .content {
+    position: static;
+   }
+
+  .sidebar {
+    width: 100%;
+    max-height: 150vh; /* Set maximum height */
+    position: fixed; /* Fix the sidebar position */
+    top: 50px; /* Adjust based on header height */
+    left: 0;
+    display: block;
+    margin-top: 5px;
+    padding: 10px;
+    background: rgba(231, 215, 241, 0.7); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Blur effect */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2); /* Added shadow effect */
+    z-index: 10; /* Ensure sidebar is above the content */
+    overflow-y: scroll; /* Enable vertical scrolling for sidebar */
+  }
+
+  .sidebar .links {
+    max-height: calc(120vh - 50px); /* Adjust based on header height */
+    overflow-y: auto; /* Enable vertical scrolling for links */
+  }
+
+  .sidebar.collapsed {
+    display: none; /* Hide sidebar on mobile */
+  }
+
+  .content {
+    margin-left: 0; /* Reset margin */
+    padding: 10px;
+    z-index: 1; /* Lower z-index to ensure content is below sidebar */
+  }
+  .sidebar .spacer {
+    height: 50px; /* Add a spacer element to create extra scroll space */
+  }
+
+  .no-scroll {
+    overflow: hidden;
+  }
+}

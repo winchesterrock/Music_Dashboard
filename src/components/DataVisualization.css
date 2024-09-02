@@ -1,0 +1,91 @@
+@keyframes popOut {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+ 
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  color: #fff;
+}
+
+.row {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  border: 1px solid #f5f5f7;
+  background: #f5f5f7;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* Increased shadow for more emphasis */
+}
+
+.top5stream {
+  font-weight: bold; /* Change font weight */
+  color: #000; /* Change text color */
+  font-size: 2.5em; /* Change font size */
+}
+
+.chartContainer {
+  background: #f5f5f7;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  opacity: 0; /* Initially hidden */
+  transform: translateY(20px); /* Initial position */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Smooth transition */
+}
+
+.chartContainer.half {
+  flex: 1;
+  background: #000;
+}
+
+.chartContainer.half2 {
+  flex: 1;
+  background: #fff;
+  color: #000;
+}
+
+.chartContainer.full {
+  width: 100%;
+}
+
+.chartContainer.animate {
+  opacity: 1; /* Fully visible */
+  transform: translateY(0); /* Final position */
+  animation: fadeIn 1s ease-in-out;
+  
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .row {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .chartContainer {
+    padding: 15px; /* Reduce padding on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 5px; /* Reduce overall padding on very small screens */
+  }
+  .chartContainer {
+    padding: 5px; /* Further reduce padding for chart containers */
+  }
+}
