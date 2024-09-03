@@ -1,3 +1,37 @@
+# Dashboard that is both responsive and user-friendly.
+
+## Requirements Fullfilled
+Dashboard Overview:  a single-page application (SPA) that includes the following sections:
+Key Metrics:
+Display cards that show the following metrics:
+Total Users: The total number of registered users on the platform.
+Active Users: The number of users who have streamed at least one song in the last 30 days.
+Total Streams: The total number of song streams on the platform.
+Revenue: The total revenue generated from subscriptions and advertisements.
+Top Artist: The artist with the most streams in the past 30 days.
+
+
+Data Visualization:
+Include the following charts:
+User Growth Chart: A line chart that shows the growth in the number of total users and active users over the past 12 months.
+Revenue Distribution: A pie chart that shows the breakdown of revenue from different sources (e.g., Subscriptions, Ads).
+Top 5 Streamed Songs: A bar chart that displays the top 5 most-streamed songs over the past 30 days.
+
+
+Data Table:
+A table that lists detailed information about recent streams with the following columns:
+Song Name
+Artist
+Date Streamed
+Stream Count
+User ID
+
+## What else's
+User can choose between Spanish, English and French
+Now you can manage your admin while listening your favourate songs 😏
+
+
+
 ## Technologies Used
 
 React
