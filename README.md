@@ -26,6 +26,10 @@ Date Streamed
 Stream Count
 User ID
 
+## What else's
+User can choose between Spanish, English and French
+Now you can manage your admin while listening your favourate songs 😏
+
 
 
 ## Technologies Used
