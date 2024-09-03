@@ -122,6 +122,7 @@ function KeyMetrics() {
         title={t('Top Artists')}
         value="" 
         images={metrics.topArtist.map(artist => artist.image)} 
+        names={metrics.topArtist.map(artist => artist.name)} // Pass the names to the MetricCard component
         className="top-artist"
       />
     </div>

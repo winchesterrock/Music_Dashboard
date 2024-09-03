@@ -4,7 +4,7 @@ import { AiOutlineArrowDown, AiOutlineArrowUp } from 'react-icons/ai';
 import { Line, Doughnut } from 'react-chartjs-2';
 import '../components/MetricCard.css'; // Import the CSS file
 
-const MetricCard = ({ title, value, images, newValue, showArrow, showArrowDown, DecreaseValue, chartData, donutData, className }) => {
+const MetricCard = ({ title, value, images, newValue, showArrow, showArrowDown, DecreaseValue, chartData, donutData, className,names }) => {
   return (
     <div className={`card ${className}`}>
       {images && images.map((image, index) => (
@@ -16,6 +16,13 @@ const MetricCard = ({ title, value, images, newValue, showArrow, showArrowDown, 
       {DecreaseValue && <div className="DecreasedValue">-{DecreaseValue} Subscriptions Paused</div>}
       <div className="title">{title}</div>
       <div className="value">{value}</div>
+      {names && (
+        <ul className="names-list">
+          {names.map((name, index) => (
+            <li key={index} className="name">{name}</li>
+          ))}
+        </ul>
+      )}
       {chartData && (
         <div className="chart">
           <Line data={chartData} options={{

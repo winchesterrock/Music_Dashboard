@@ -19,9 +19,27 @@
     margin: 15px; /* Increased margin */
     text-align: center;
     position: relative;
-    overflow: hidden;
-    
-    
+    overflow: hidden;  
+  }
+  .card.total-streams {
+    height: 210px; /* Adjust height */
+    width: 30%; /* Adjust width */
+  }
+  .card.active-user {
+    height: 210px; /* Adjust height */
+    width: 30%; /* Adjust width */
+  }
+  .card.total-users-card {
+    height: 210px; /* Adjust height */
+    width: 30%; /* Adjust width */
+  }
+  .card.revenue {
+    height: 210px; /* Adjust height */
+    width: 30%; /* Adjust width */
+  }
+  .card.top-artist {
+    height: 210px; /* Adjust height */
+    width: 100%; /* Adjust width */
   }
   
   .image {
@@ -63,7 +81,19 @@
   }
   .chart {
     height: 100px; /* Adjust height as needed */
-    margin-top: 20px;
+    margin-top: 10px; /* Adjust margin to move the chart up */
+  margin-bottom: 20px; 
+  }
+  .names-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    color: #fff;
+  }
+  
+  .name {
+    font-size: 0.8em;
+    margin: 5px 0;
   }
   
   /* Responsive design */
@@ -100,6 +130,18 @@
       height: 210px; /* Adjust height */
       width: 100%; /* Adjust width */
     }
+    .card.active-user {
+      height: 210px; /* Adjust height */
+      width: 100%; /* Adjust width */
+    }
+    .card.revenue {
+      height: 210px; /* Adjust height */
+      width: 100%; /* Adjust width */
+    }
+    .card.card.total-users-card {
+      height: 210px; /* Adjust height */
+      width: 100%; /* Adjust width */
+    }
      
     .image {
       width: 40px; /* Adjust image size for mobile */
@@ -107,7 +149,7 @@
     }
   
     .title {
-      font-size: 1em; /* Adjust font size for mobile */
+      font-size: 1.0em; /* Adjust font size for mobile */
     }
   
     .value {
@@ -120,5 +162,19 @@
     .chart {
         height: 130px; /* Adjust height for mobile */
        }
+       .names-list {
+        list-style-type: none; /* Remove bullet points */
+        padding: 0;
+        margin: 10px 0 20px 0; /* Add margin to the bottom */
+        color: #fff;
+       
+       }
+      
+      .name {
+        font-size: 0.8em;
+        margin: 5px 0;
+      }
+      
+         
   }
   
