@@ -121,13 +121,13 @@
 
 .link {
   display: block;
-  padding: 15px;
+  padding: 5px;
   color: #000;
   font-family: var(--typography-html-font, "SF Pro Display", system-ui, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Helvetica", "Arial", sans-serif);
   text-decoration: none;
   margin-bottom: 35px;
-  border-radius: 15px;
-  font-size: 2.0em;
+ 
+  font-size: 1.5em;
   transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
 }
 
@@ -235,6 +235,17 @@
     font-size: 1.0em; /* Smaller font size for mobile */
     text-align: center; /* Center align text */
     width: 100%; /* Full width */
+  }
+  .link {
+    display: block;
+    padding: 5px;
+    color: #000;
+    font-family: var(--typography-html-font, "SF Pro Display", system-ui, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Helvetica", "Arial", sans-serif);
+    text-decoration: none;
+    margin-bottom: 35px;
+   
+    font-size: 1.5em;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
   }
 
   .hamburger {
