@@ -13,7 +13,7 @@ function KeyMetrics() {
     totalUsers: 23611,
     newUsers: 500, 
     activeUsers: 8000,
-    totalStreams: 50000,
+    totalStreams: 31000,
     revenue: 120000,
     Decreased: 800,
     topArtist: [
@@ -61,7 +61,39 @@ function KeyMetrics() {
       },
     ],
   };
-  
+  const radarChartData = {
+    labels: ['Age 18-24', '25-34', '35-44', '45-54', '55+'],
+    datasets: [
+      {
+        label: 'Active Users',
+        data: [18000, 12000, 10000, 1500, 500],
+        backgroundColor: 'rgba(255, 99, 132, 0.2)',
+        borderColor: 'rgba(255, 99, 132, 0.1)',
+        borderWidth: 1,
+      },
+      {
+        label: 'New Users',
+        data: [25000, 37000, 46000, 49000, 45000],
+        backgroundColor: 'rgba(138, 185, 221,0.2)',
+        borderColor: 'rgba(138, 185, 221,0.4)',
+        borderWidth: 1,
+      },
+      {
+        label: 'Total Streams',
+        data: [50000, 90000, 40000, 30000, 101000],
+        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+        borderColor: 'rgba(75, 192, 192, 1)',
+        borderWidth: 1,
+      },
+      {
+        label: 'Revenue',
+        data: [120000, 150000, 100000, 80000, 30000],
+        backgroundColor: 'rgba(153, 102, 255, 0.2)',
+        borderColor: 'rgba(153, 102, 255, 1)',
+        borderWidth: 1,
+      },
+    ],
+  };
   
   // const chartData = {
   //   labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
@@ -95,7 +127,15 @@ function KeyMetrics() {
         value={metrics.totalUsers} 
         newValue={metrics.newUsers} 
         showArrow={true} // Show the upward arrow to indicate growth
+        radarChartData={radarChartData} // Pass the radar chart data
         className="total-users-card"
+      />
+
+      <MetricCard
+        title={t('Total Streams')}
+        value={metrics.totalStreams}
+        chartData={chartData}
+        className="total-streams"
       />
       <MetricCard
  title={t('Active Users')}
@@ -103,14 +143,6 @@ function KeyMetrics() {
   donutData={donutData}
   className="active-user"
 />
-      <MetricCard
-        title={t('Total Streams')}
-        value={metrics.totalStreams}
-        chartData={chartData}
-        showArrow={true}
-        newValue="500"
-        className="total-streams"
-      />
       <MetricCard 
         title={t('Revenue')}
         value={`$${metrics.revenue}`}  

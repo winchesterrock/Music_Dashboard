@@ -5,8 +5,61 @@
     }
     100% {
       background-position: 500% 0;
-    }
+    
   }
+}
+/* Radar Chart Specific Styles */
+.card.total-users-card .radar-chart-container {
+  height: 150px; /* Adjust height for better visibility */
+  margin-top: 20px; /* Add margin to the top */
+  margin-bottom: 20px; /* Add margin to the bottom */
+  position: relative;
+}
+
+.card.total-users-card .radar-chart-container canvas {
+  width: 100% !important; /* Ensure the canvas takes full width */
+  height: 100% !important; /* Ensure the canvas takes full height */
+}
+
+/* Chart Colors */
+.card.total-users-card .radar-chart-container .chartjs-size-monitor {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  pointer-events: none;
+  visibility: hidden;
+  z-index: -1;
+}
+
+.card.total-users-card .radar-chart-container .chartjs-size-monitor-expand,
+.card.total-users-card .radar-chart-container .chartjs-size-monitor-shrink {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  pointer-events: none;
+  visibility: hidden;
+  z-index: -1;
+}
+
+.card.total-users-card .radar-chart-container .chartjs-size-monitor-expand > div,
+.card.total-users-card .radar-chart-container .chartjs-size-monitor-shrink > div {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  pointer-events: none;
+  visibility: hidden;
+  z-index: -1;
+}
+
   
   .card {
     background-color: #000;
@@ -22,7 +75,7 @@
     overflow: hidden;  
   }
   .card.total-streams {
-    height: 210px; /* Adjust height */
+    height: 410px; /* Adjust height */
     width: 30%; /* Adjust width */
   }
   .card.active-user {
@@ -30,7 +83,7 @@
     width: 30%; /* Adjust width */
   }
   .card.total-users-card {
-    height: 210px; /* Adjust height */
+    height: 410px; /* Adjust height */
     width: 30%; /* Adjust width */
   }
   .card.revenue {
@@ -80,9 +133,14 @@
     color: #da1414;
   }
   .chart {
-    height: 100px; /* Adjust height as needed */
-    margin-top: 10px; /* Adjust margin to move the chart up */
+    height: 100px;  
+    margin-top: 10px;  
   margin-bottom: 20px; 
+  }
+  .streamschart {
+    height: 220px;  
+    margin-top: 50px;  
+  
   }
   .names-list {
     list-style-type: none;
@@ -120,6 +178,7 @@
       font-size: 0.8em; /* Adjust font size for tablets */
     }
   }
+
   
   @media (max-width: 480px) {
     .card {
@@ -160,7 +219,12 @@
       font-size: 0.7em; /* Adjust font size for mobile */
     }
     .chart {
-        height: 110px; /* Adjust height for mobile */
+        height: 110px;  
+        margin-top: 10px;  
+        margin-bottom: 40px; 
+       }
+       .streamschart {
+        height: 110px; 
         margin-top: 10px; /* Adjust margin to move the chart up */
         margin-bottom: 40px; 
        }
@@ -175,6 +239,12 @@
       .name {
         font-size: 0.8em;
         margin: 5px 0;
+      }
+      .card.total-users-card .radar-chart-container {
+        height: 105px; /* Adjust height for better visibility */
+        margin-top: 20px; /* Add margin to the top */
+        margin-bottom: 20px; /* Add margin to the bottom */
+        position: relative;
       }
       
          
