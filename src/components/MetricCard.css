@@ -160,7 +160,9 @@
       font-size: 0.7em; /* Adjust font size for mobile */
     }
     .chart {
-        height: 130px; /* Adjust height for mobile */
+        height: 110px; /* Adjust height for mobile */
+        margin-top: 10px; /* Adjust margin to move the chart up */
+        margin-bottom: 40px; 
        }
        .names-list {
         list-style-type: none; /* Remove bullet points */
